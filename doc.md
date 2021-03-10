@@ -210,10 +210,37 @@ We can use the find() method of an array:
 })
 
 Return the first item that returns true. Returns undefined if the element is not found.
+
   - A commonly used  syntax is:
   >numberX.find(x => numberX.id === my_id)
   The above line will return he first element in the array that has id === my_id
-  find Index() works similarly to find()
+
+  findIndex() works similarly to find(), but returns the index of the first item that returns true, if not found , it returns undefined:
+
+  numberX.findIndex((element,index, array)=>{
+    //return true or false
+  })
+
+  Another method is includes():
+  numberX.includes(value)
+
+  Returns true if a contains value
+  numberX.includes(values, i)
+
+  Returns true if numberX contains value after the position i.
+
+  #### Loops
+
+  - one of the main control structures of JavaScript
+  - With a loop we can automate  and repeat indefinitely a block of code, or how many times we want it to run
+  - Ways to iterate through loop are:
+    * while loops 
+    * for loops 
+    * for...of loops
+
+  ##### while 
+    - simplest loop structure that JavaScript provides
+    - 
 
 
 
