@@ -29,7 +29,7 @@ Ways of declaring variable
 
 1. const : defines a constant refererence to a value. This means the reference cannot be changed, you cannot reassign a new value to it.
 >cont a = 0 ;
-> a = 1; //This cannot work: it cannot be reassigned.
+> a = 1; //This cannot work: it cannot be reassigned. Dont use one letter for variable name. Write a variable name that represent the value of that variable. Variable name should reprsent the value of the variable.
 
 2. let : Using let we can assign a new value to it.
 >let a = 0;
@@ -64,6 +64,8 @@ Primitive types:
 * null
 * underfined
 
+Dyanmic typing - //JavaScript
+Static typing - //Rust, 
 Object Types:Any value that is not of a primitive type is an object.
 Object types have properties and also methods that can act on those properties
 
@@ -180,11 +182,38 @@ Checking for numbers of elements in an array using the length property.
 ##### How to add an item to an array
 We can add element at the end of an array using the push() method:
 >a.push(4)
-Adding an element at the begginning of an array using the unshift ()method
->a.unshift[]
+Adding an element at the beginning of an array using the unshift ()method
+>a.unshift()
 
+##### How to remove and object from an array
+We can remove an item from an array using the pop()method:
+>a.pop()
 
+We can remove an item from the beginning of an array using the shift() method:
+>a.shift()
 
+##### How to join two or more  arrays
+We can join multiple arrays by using concat():
+>const numberX = ['1','2']
+const numberY = ['54', '65']
+const numberZ  = concatnumberX(numberY)
+
+You can also use the spread operator (...) 
+>const numberX = ['1','2']
+const numberY = ['54', '65']
+const numberZ = [...numberX, ...numberY]
+
+##### How to find a specific item on the array
+We can use the find() method of an array:
+>nunmberX.find ((element, index, array)=>{
+  //return true or false    
+})
+
+Return the first item that returns true. Returns undefined if the element is not found.
+  - A commonly used  syntax is:
+  >numberX.find(x => numberX.id === my_id)
+  The above line will return he first element in the array that has id === my_id
+  find Index() works similarly to find()
 
 
 
