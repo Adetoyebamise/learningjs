@@ -195,19 +195,19 @@ We can remove an item from the beginning of an array using the shift() method:
 ##### How to join two or more  arrays
 We can join multiple arrays by using concat():
 >const numberX = ['1','2']
-const numberY = ['54', '65']
-const numberZ  = concatnumberX(numberY)
+>const numberY = ['54', '65']
+>const numberZ  = concatnumberX(numberY)
 
 You can also use the spread operator (...) 
 >const numberX = ['1','2']
-const numberY = ['54', '65']
-const numberZ = [...numberX, ...numberY]
+>const numberY = ['54', '65']
+>const numberZ = [...numberX, ...numberY]
 
 ##### How to find a specific item on the array
 We can use the find() method of an array:
 >nunmberX.find ((element, index, array)=>{
-  //return true or false    
-})
+>  //return true or false    
+>})
 
 Return the first item that returns true. Returns undefined if the element is not found.
 
@@ -240,10 +240,48 @@ Return the first item that returns true. Returns undefined if the element is not
 
   ##### while 
     - simplest loop structure that JavaScript provides
-    - 
+    - add a condition after the while keyword  
+    - provide a block that is run until the condition evaluates to true.
+    >const list = ['soccer', 'Basketball', 'javelin']
+    >  let i = 0
+    >  while (i < list.length){
+    >    console.log(list [i])
+    >    console.log(i)
+    >    i = i + 1
+    >  }
+    - You can interrupt  a while loop using the break keyword;
+    >while(true){
+    > if (somethingIsTrue) break
+    >}
+    - We can jump to the next iteration using continue :
+    >while (true) {
+    > if (somethingIsTrue) continue
+    > // do something else
+    }
 
+  ##### do...while loop
+    * condition is evaluated after the code block is executed
+    * The block is always executed at least once
+    Example
+    >const list = ['a', 'b', 'c']
+    >let i = 0
+    >do{
+      console.log(list[i])  //value
+      console.log(i) index
+      i = i+1
+    } while (i < list.length)
 
-
+    ##### For
+    * Second very important looping structure in JavaScript is the for loop
+    * We pass three instruction 
+      - the initialization
+      - the condition
+      - the increment part
+    Example;
+    >const list = ['Drake', 'Cheque', 'Kiwanuka', 'Jcole']
+    >for (let i = 0; i< list.length; i++){
+      console.log(lo)
+    }
 
 
 
