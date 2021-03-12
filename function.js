@@ -9,17 +9,19 @@
 // If the value of the third argument is ‘sum’
 // Your function should return the sum of the first two arguments
 
-function workItOut(a, b, c){
-    if (c){
-      let c = a*b
-  return c
+function workItOut(parameterFirst, parameterSecond, parameterThird)
+    {
+    if (parameterThird == 'multiply'){
+      let result= parameterFirst*parameterSecond;
+  return result
+  } else if (parameterThird == 'divide'){
+        result= parameterFirst/parameterSecond;
+  return result
   }
-  if (c){
-    let c =a/b
-  return c
+    else if (parameterThird == 'sum'){
+      result=parameterFirst+parameterSecond;
+    return result
+    } 
   }
-  if (c){
-    let c=a+b
-  }
-  }
-  workItOut(34, 5, 'Artist')
+console.log('Let',+ workItOut(35,5,'divide'));
+workItOut(34,56,'sum');                           
