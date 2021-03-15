@@ -10,7 +10,7 @@
   }
  console.log("The Numbers Match is:" + theNumbersMatch);
 
-// Conditionals
+/*Conditionals
 
  let theNumber = Number(alert("pick a number"));
  console.log ("Your number is the square root of " + theNumber*theNumber);
@@ -18,6 +18,9 @@
   if (!Number.isNaN(theNumber)) {
     console.log("Your number is the square root of " + theNumber*theNumber);
   }             
+*/
+
+//   I understood that using the if...else statement are appropriate for two different or unique cases.
 
 // Looping control flow
  let numberFia = 0 ;
@@ -51,9 +54,9 @@
 //The code that computes 2 to power 10 using for loop
   let result = 1
   for (let counter = 0 ; counter <= 10; counter = counter + 1) {
-    result = result * 2
+    output = result * 2
   }
-  console.log(result)
+  console.log(output)
 
 //Breaking out of a loop 
   for (let current = 20; ; current = current + 1){
