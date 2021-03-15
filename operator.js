@@ -33,3 +33,10 @@ if (a==b){
 }else{
   console.log("NoMatch")
 }
+
+// Finding Maximum number
+console.log(Math.max(4, 2))
+
+ console.log(Math.max(4,3))
+
+ console.log(Math.min( 4, 3) * 10)

@@ -554,10 +554,13 @@ Classes can hold properties, like name and methods
 Methods are defined in this way:
 
 >class Room{
-  hello(){
-    return 'Welcome to the upperroom' 
-  }
-}
+> hello(){
+
+>   return 'Welcome to the upperroom' 
+
+> }
+
+> }
 
 We can invoke methods on an instance of class:
 >class person {
@@ -571,20 +574,27 @@ const warroom = new Room()
 There is a special method called constructor() we can use to initialize the class properties when we create  a new object instance
 
 It works like this :
-  class Room{
-    constructor(name){
-      this.name = name 
-    }
-    hello(){
-      return  'Welcome ' + this.name +'.'
+  >class Room{
 
-    }
-  }
+  >  constructor(name){
+
+  >    this.name = name 
+
+  >  }
+
+  >  hello(){
+
+  >    return  'Welcome ' + this.name +'.'
+
+  >  }
+
+  > }
 
 How do we use this to access the object instance .
  - We instantiate a new object from the class, passing a string, and when we call hello, we'll get a personalized message 
-  const Upperroom = new Room ('Upperroom')
-  Upperroom.hello () //'hello, Welcome to the Upperroom
+  >const Upperroom = new Room ('Upperroom')
+
+  >Upperroom.hello () //'hello, Welcome to the Upperroom
 
   When the object is initialized, the constructor method is called, with any parameters passed. 
 
@@ -592,11 +602,16 @@ How do we use this to access the object instance .
   We can define  a method as static to allow it to be executed on the class instead:
 
   >class Room {
-    static genericHello(){
-      return 'Hello'
-    }
-  }
-    Room.genericHello() //Hello
+
+  >  static genericHello(){
+
+  >   return 'Hello'
+
+  > }
+
+  > }
+
+  >  Room.genericHello() //Hello
 
 
 #### Inheritance
@@ -605,15 +620,16 @@ A class can extend another class, and objects initialized using that class inher
 
 Suppose we have a class Room:
 >class Room {
-  hello(){
-    return 'Welcome to our Room'
+> hello(){
+>    return 'Welcome to our Room'
 
-  }
-}
+> }
+
+> }
 We can define a new class programmer that extends Person
 >class Programmer extends Person {
 
-}
+>}
 
 Now if we instantiate a new object with class programmer, it has access to the hello() method:
 >const dolapo = new Programmer()
@@ -621,13 +637,20 @@ Now if we instantiate a new object with class programmer, it has access to the h
 
  Inside a child class, you can reference the parent class calling super()
  >class Programmer extends Person{
-   hello() {
-     return super.hello() +
-      'I am a programmer'
-   }
- }
-const dolapo = new Programmer()
-dolapo.hello()
+
+ >  hello() {
+
+ >   return super.hello() +
+
+ >     'I am a programmer'
+
+ >  }
+
+ > }
+
+>const dolapo = new Programmer()
+
+>dolapo.hello()
 
 
 ##### Asyncronous Programming and Callbacks
@@ -637,22 +660,29 @@ However, there are times you cnnot just wait for a line of code to execute, Java
 One of the simplest examples of how to use callbacks is timers. Timers are not part of JavaScript, but they are provided by the browser, and Node.js.
 
 The setTimeout() function accepts 2 arguments: a function, and a number. The number is the milliseconds that must pass before the function is ran
-Example
+**Example**
 
-setTimeout(() =>{
-  //runs after 2 seconds 
-  console.log('inside the function')
-}, 2000)
+> setTimeout(() =>{
+
+>  //runs after 2 seconds 
+
+> console.log('inside the function')
+
+> }, 2000)
 
 The function containing the console.log ('inside the function') line will be executed after 2 seconds.
 If you add a console.log('before') prior to the function, and console.log('after') after it:
 >console.log('before')
-setTimeout(()=> {
-  //runs in 2 seconds
-  console.log ('inside the function')
 
-}, 2000)
-console.log('after')
+>setTimeout(()=> {
+
+> //runs in 2 seconds
+
+> console.log ('inside the function')
+
+> }, 2000)
+
+> console.log('after')
 
 Happenings in the console
 >before
@@ -664,40 +694,58 @@ The callback function is called back asynchronously
 We can define a function that accepts a callback parameter, which is a function
 When the code is ready to invoke the callback, we invoke it passing the result:
 
->const doSomething = callback => {
-  //do things
-  //do things
-  const result = /*..*/
-  callback(result)
-}
+> const doSomething = callback => {
+
+>  //do things
+
+> //do things
+
+> const result = /*..*/
+
+>  callback(result)
+
+> }
 
 Code Using this function would use it like this :
 >doSomething(result =>{
-  console.log(result)
-})
+
+>  console.log(result)
+
+> })
 
 #### Promises
 Promises are an alternative way to deal with asyncronous code
 The main problem with the asynchronous ... is that if we need to use the result of the function in the rest of the code, all our code must be nested inside the callback, and if we have to do 2-3 callbacks we enter in what is called  "callback hell" with many levels ofthe functions indented into our functions :
 
 >doSomething(result =>{
-    doSomethingElse(anotherResult =>{
-      doSomethingElseAgain(yetAnotherResult => {
-        console.log(result)
-      })
-    })
-})
+
+>    doSomethingElse(anotherResult =>{
+
+>     doSomethingElseAgain(yetAnotherResult => {
+
+>        console.log(result)
+
+>     })
+
+>   })
+
+> })
  Promises are one way to deal with this
 
  Instead of doing :
-  doSomething(result => {
-    console.log(result)
-  })
+  >doSomething(result => {
+
+  >  console.log(result)
+
+  >})
   We call a promise-based in this way:
   >doSomething()
-    .then(result => {
-      console.log(result)
-    })
+
+  >  .then(result => {
+
+  >    console.log(result)
+
+  > })
 We first call the function, then we have a then() method that is called whenthe function ends. Indentation does not matter but we can use them as style for clarity.
 
 It's common to catch error using the the catch() method
@@ -722,12 +770,13 @@ Instead of declaring it as a normal function:
   and we pass a function in the promise constructor:
   >const doSomthing = new Promise(()=>{
 
-  })
+  > })
 The functionre receives 2 parameters. The first is a function we call to resolve the promise, the second  afunction we call to reject thepromise 
 >const doSomething = newPromise (
-  (resolve, reject)=> {
 
-  })
+>  (resolve, reject)=> {
+
+> })
 Resolving a promise means complete it successfully (which result in calling the then() method in who uses it)
 Rejecting a Promise means ending it with an error(which results in calling the catch()method in who uses it)
 >const doSomething = new Promise
